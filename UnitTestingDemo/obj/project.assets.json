@@ -12748,7 +12748,7 @@
       ]
     },
     "System.Xml.XPath/4.3.0": {
-      "sha512": "v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
+      "sha512": "xjNyLQ7HLDnFa+ppPKF/W3Fle9hjGctKU+mGvA/4Q/cYQdnrSZImTKLybKlLfQdityRM9CS7IIdV3dr0L88szQ==",
       "type": "package",
       "path": "system.xml.xpath/4.3.0",
       "files": [
@@ -12875,11 +12875,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vivek\\Desktop\\DotNet\\Unit testing\\UnitTestingDemo\\UnitTestingDemo\\UnitTestingDemo.csproj",
+      "projectUniqueName": "C:\\Users\\Vivek\\Desktop\\DotNet\\Unit testing\\UnitTest-master\\UnitTestingDemo\\UnitTestingDemo.csproj",
       "projectName": "UnitTestingDemo",
-      "projectPath": "C:\\Users\\Vivek\\Desktop\\DotNet\\Unit testing\\UnitTestingDemo\\UnitTestingDemo\\UnitTestingDemo.csproj",
+      "projectPath": "C:\\Users\\Vivek\\Desktop\\DotNet\\Unit testing\\UnitTest-master\\UnitTestingDemo\\UnitTestingDemo.csproj",
       "packagesPath": "C:\\Users\\Vivek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vivek\\Desktop\\DotNet\\Unit testing\\UnitTestingDemo\\UnitTestingDemo\\obj\\",
+      "outputPath": "C:\\Users\\Vivek\\Desktop\\DotNet\\Unit testing\\UnitTest-master\\UnitTestingDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

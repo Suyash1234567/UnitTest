@@ -18,12 +18,12 @@ namespace UnitTestDemoProducts
         TotalAmt totalAmt = new TotalAmt();   
         
         CustomerProduct custProd = new CustomerProduct();
-        //[Test] //attribute indicates a method is a test method.
-               //[TestCase("Regualar", 3)]
-               //[TestCase("Regular", 1)]
-               //[TestCase("Premium", 2)]
+        [Test] //attribute indicates a method is a test method.
+        [TestCase("Regualar", 3)]
+        [TestCase("Regular", 1)]
+        [TestCase("Premium", 2)]
 
-        [Test]
+        //[Test]
         public void ReturnProductDiscount(string CustomerType, int ProductID)
         {
             ProductController product = new ProductController();
@@ -45,20 +45,28 @@ namespace UnitTestDemoProducts
             prod1.TotalAmount = 0;
             foreach (ProductModel prod in products)
             {
-                if (CustomerType == "Premium")
+                if (prod.ProductId == ProductID)
                 {
-                    prod1.TotalAmount = prod.ProductPrice - prod.ProductPrice * 0.1;
-                }
-                if (CustomerType == "Regular")
-                {
-                    prod1.TotalAmount = prod.ProductPrice - prod.ProductPrice * 0.2;
+                    if (CustomerType == "Premium")
+                    {
+                        custProd.CustomerType = "Premium";
+                        custProd.ProductID = prod.ProductId;
+                        prod1.TotalAmount = prod.ProductPrice - prod.ProductPrice * 0.2;
+                    }
+                    if (CustomerType == "Regular")
+                    {
+                        custProd.CustomerType = "Regular";
+                        custProd.ProductID = prod.ProductId;
+                        prod1.TotalAmount = prod.ProductPrice - prod.ProductPrice * 0.1;
+                    }
+                    
                 }
             }
            // var pro = product.GetResult(custProd);
             double checkProduct = 0.9 * prod1.ProductPrice;
             //CustomerProduct custProd1 = new CustomerProduct();
             //Assert.AreEqual((prod1.TotalAmount, product.GetResult(custProd)));
-            Assert.IsTrue(prod1.TotalAmount == product.GetResult(custProd));
+            Assert.IsTrue(prod1.TotalAmount > 0 && prod1.TotalAmount == product.GetResult(custProd));
         }
     }
 }
