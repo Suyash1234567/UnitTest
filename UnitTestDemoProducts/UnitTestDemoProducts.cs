@@ -18,11 +18,12 @@ namespace UnitTestDemoProducts
         TotalAmt totalAmt = new TotalAmt();   
         
         CustomerProduct custProd = new CustomerProduct();
-        [Test] //attribute indicates a method is a test method.
-        [TestCase("Regualar", 3)]
-        [TestCase("Regular", 1)]
-        [TestCase("Premium", 2)]
-        
+        //[Test] //attribute indicates a method is a test method.
+               //[TestCase("Regualar", 3)]
+               //[TestCase("Regular", 1)]
+               //[TestCase("Premium", 2)]
+
+        [Test]
         public void ReturnProductDiscount(string CustomerType, int ProductID)
         {
             ProductController product = new ProductController();
@@ -37,7 +38,7 @@ namespace UnitTestDemoProducts
             };
             //Act
            
-            double totalAmount = 0;
+            
             ProductData prodData = new ProductData();
             var products = prodData.GetProducts();
             ProductModel prod1 = new ProductModel();

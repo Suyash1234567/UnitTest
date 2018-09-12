@@ -14,6 +14,22 @@ namespace UnitTestingDemo.Controllers
         //{
         //    return View();
         //}
+        //public IActionResult Index(CustomerProduct custProd)
+        //{
+        //    BillModel model = new BillModel();
+        //    model.TotalAmount = GetResult(custProd);
+        //    return (model);
+        //    //return View();
+        //}
+        [HttpGet]
+        public IActionResult Index()
+        {
+            BillModel model = new BillModel();
+            //model.TotalAmount = GetResult(custProd);
+
+            return View(model);
+        }
+        [HttpPost]
         public IActionResult Index(CustomerProduct custProd)
         {
             BillModel model = new BillModel();
@@ -21,9 +37,11 @@ namespace UnitTestingDemo.Controllers
             //ViewData["TotalPrice"] = model.TotalAmount;
             //ViewBag.totalAmount = model;
             model.TotalAmount = GetResult(custProd);
-            return View(model);
+            //return RedirectToAction("Index", "Product");
+            return Json(model.TotalAmount);
             //return View();
         }
+       
 
         //public IActionResult ProductDiscount(CustomerProduct custProd)
         //{

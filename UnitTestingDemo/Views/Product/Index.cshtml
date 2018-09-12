@@ -35,7 +35,8 @@
 
 @{
 <p>price</p>  
-<label>@Convert.ToString(Model.TotalAmount);</label>
+<label id="divAjaxLoad">@Convert.ToString(Model.TotalAmount);</label>
+    @*<input type="text" asp-for="@Model.TotalAmount" />*@
 }<br />
 <div class="row">
     <input type="button" value="Submit" id="btnSearch" data-attr="search" />

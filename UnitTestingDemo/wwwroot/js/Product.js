@@ -5,14 +5,16 @@
     //alert(obj);
     $.ajax(
         {
-            type: "GET",
+            type: "POST",
             url: "/Product/Index",
             data: obj,
             success: function (response) {
                 console.log(response);
-                $('#divInitialLoad').hide();
+                debugger;
+                //$('#divInitialLoad').hide();
                 $('#divAjaxLoad').html('');
-                $('#divAjaxLoad').html(response);
+                $('#divAjaxLoad').html("Discounted Price: "+ response);
+                
                 // console.log(response);
             },
             error: function (err) {
