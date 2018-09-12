@@ -1,0 +1,47 @@
+﻿
+@model UnitTestingDemo.Models.BillModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+@*<div class="row" style="margin-top:100px">
+        Search a Product by it's name:
+        <input type="text" id="searchByName" />
+    </div>*@
+<div class="row" style="margin-top:100px">
+    Select your Customer type:
+    <select id="CustomerType">
+        <option value="">Select</option>
+        <option value="Regular">Regular</option>
+        <option value="Premium">Premium</option>
+    </select>
+
+    Select your Product :
+    <select id="product">
+        <option value="">Select</option>
+        <option value="1">Apple</option>
+        <option value="2">Mango</option>
+        <option value="3">Guava</option>
+        <option value="4">Banana</option>
+        <option value="5">Litchi</option>
+        <option value="6">Pomergranate</option>
+    </select>
+</div>
+
+
+@{
+<p>price</p>  
+<label>@Convert.ToString(Model.TotalAmount);</label>
+}<br />
+<div class="row">
+    <input type="button" value="Submit" id="btnSearch" data-attr="search" />
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/Product.js"></script>
+
+
